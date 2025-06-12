@@ -13,23 +13,23 @@ export const Navbar = () => {
         <div className="max-w-screen flex items-center justify-between px-6 py-3">
           <div className="flex flex-col py-2 text-zinc-300">
             <h2 className="text-left text-2xl md:text-3xl lg:text-4xl">
-              Flick Finder
+              FlickFinder
             </h2>
-            <span className="text-sm italic md:ml-4">Find your next movie</span>
+            <span className="text-sm italic md:ml-8">Find & discover your next watch!</span>
           </div>
 
           {/* Desktop menu */}
-          <ul className="hidden md:flex space-x-6 text-zinc-300 font-chakra transition-all duration-300">
-            <li>
+          <ul className="hidden md:flex space-x-6 text-zinc-300 font-bold tracking-wider">
+            <li className="transition-all duration-300 ease-in-out hover:drop-shadow-lg hover:drop-shadow-cyan-500/70">
               <a href="#">Home</a>
             </li>
-            <li>
+            <li className="transition-all duration-300 ease-in-out hover:drop-shadow-lg hover:drop-shadow-cyan-500/70">
               <a href="#">Movies</a>
             </li>
-            <li>
+            <li className="transition-all duration-300 ease-in-out hover:drop-shadow-lg hover:drop-shadow-cyan-500/70">
               <a href="#">TV-Shows</a>
             </li>
-            <li>
+            <li className="transition-all duration-300 ease-in-out hover:drop-shadow-lg hover:drop-shadow-cyan-500/70">
               <a href="#">About</a>
             </li>
           </ul>
@@ -44,22 +44,22 @@ export const Navbar = () => {
 
         <div
           className={`
-          md:hidden overflow-hidden z-90 transition-all duration-300
+          md:hidden bg-zinc-900 overflow-hidden z-90 transition-all duration-300
           ${isCollapsed ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}
         `}
         >
-          <ul className="px-4 pb-4 space-y-2">
-            <li>
-              <a href="#">Home</a>
+          <ul className="px-4 pb-4 space-y-2 font-bold tracking-wider text-center">
+            <li className="transition-all duration-300 ease-in-out hover:drop-shadow-lg hover:drop-shadow-cyan-500/70">
+              <a href="#" className="block py-1" >Home</a>
             </li>
-            <li>
-              <a href="#">Movies</a>
+            <li className="transition-all duration-300 ease-in-out hover:drop-shadow-lg hover:drop-shadow-cyan-500/70">
+              <a href="#" className="block py-1" >Movies</a>
             </li>
-            <li>
-              <a href="#">TV-Shows</a>
+            <li className="transition-all duration-300 ease-in-out hover:drop-shadow-lg hover:drop-shadow-cyan-500/70">
+              <a href="#" className="block py-1" >TV-Shows</a>
             </li>
-            <li>
-              <a href="#">About</a>
+            <li className="transition-all duration-300 ease-in-out hover:drop-shadow-lg hover:drop-shadow-cyan-500/70">
+              <a href="#" className="block py-1" >About</a>
             </li>
           </ul>
         </div>
