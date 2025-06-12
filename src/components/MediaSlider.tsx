@@ -27,7 +27,7 @@ const [ref, slider] = useKeenSlider<HTMLDivElement>({
     slides: { perView: 1 },
 })
 
-
+// Fetch data when the component mounts
   useEffect(() => {
     const load = async () => {
       const data = await fetchData();
@@ -36,6 +36,7 @@ const [ref, slider] = useKeenSlider<HTMLDivElement>({
     load();
   }, [fetchData]);
 
+  // Update the slider when items change
   useEffect(() => {
     if (slider.current) {
       slider.current.update();
@@ -44,7 +45,7 @@ const [ref, slider] = useKeenSlider<HTMLDivElement>({
 
 return (
     <section className='w-full max-w-screen-xl mt-8 px-2 overflow-hidden'>
-        <h2 className='py-3 text-left'>{sliderTitle}</h2>
+        <h2 className='py-3 text-left tracking-wider mb-1'>{sliderTitle}</h2>
         <div ref={ref} className='keen-slider'>
             {items.map((item) => (
               <div key={item.id} className='keen-slider__slide'>
