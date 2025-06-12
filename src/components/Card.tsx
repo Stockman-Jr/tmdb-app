@@ -1,5 +1,4 @@
 import type { MediaItem } from "../types/tmdb-type";
-import { Icon } from "@iconify/react";
 import placeholderImg from "../assets/placeholder.jpg";
 
 interface CardProps {
@@ -28,7 +27,7 @@ export const Card = ({ item }: CardProps) => {
             : "0.0";
 
         return (
-          <div className="relative w-full max-w-48 lg:max-w-64 rounded-xl overflow-hidden group mx-auto">
+          <div className="relative w-full max-w-48 lg:max-w-64 rounded-xl overflow-hidden group mx-auto shadow-lg">
             <img
               src={imgUrl}
               alt={title}

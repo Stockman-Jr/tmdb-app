@@ -43,7 +43,7 @@ const [ref, slider] = useKeenSlider<HTMLDivElement>({
   }, [items, slider]);
 
 return (
-    <section className='w-full max-w-screen-xl mt-8 px-2 overflow-hidden mx-auto'>
+    <section className='w-full max-w-screen-xl mt-8 px-2 overflow-hidden'>
         <h2 className='py-3 text-left'>{sliderTitle}</h2>
         <div ref={ref} className='keen-slider'>
             {items.map((item) => (
