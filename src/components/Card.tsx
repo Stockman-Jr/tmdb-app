@@ -20,6 +20,8 @@ export const Card = ({ item }: CardProps) => {
         } else if (item.backdrop_path) {
           imgUrl = `https://image.tmdb.org/t/p/w500${item.backdrop_path}`;
         }
+
+        // Ensure score displays with one decimal
         const score =
           item.vote_average !== undefined && item.vote_average !== null
             ? item.vote_average.toFixed(1)
@@ -33,13 +35,12 @@ export const Card = ({ item }: CardProps) => {
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
 
-            <div className="absolute bottom-0 left-0 w-full bg-black/80 text-rose-200 p-2 text-sm">
-              <h3 className="font-semibold truncate">{title}</h3>
+            <div className="absolute bottom-0 left-0 w-full bg-black/80  p-2 text-sm">
+              <h3 className="font-semibold truncate text-teal-200">{title}</h3>
               <div className="flex justify-between text-xs mt-1">
                 <span>{releaseYear}</span>
                 <span>
-                  <Icon icon={"fluent-emoji-flat:star"} width={16} />
-                  {score}
+                  ⭐ {score}
                 </span>
               </div>
             </div>

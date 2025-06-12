@@ -9,7 +9,7 @@ export const Navbar = () => {
     };
 
     return (
-      <nav className="w-full fixed top-0 z-50 shadow-md text-zinc-300">
+      <nav className="w-full fixed top-0 z-50 shadow-md text-zinc-300 bg-zinc-900/70 backdrop-blur-md">
         <div className="max-w-screen flex items-center justify-between px-6 py-3">
           <div className="flex flex-col py-2 text-zinc-300">
             <h2 className="text-left text-2xl md:text-3xl lg:text-4xl">
@@ -44,7 +44,7 @@ export const Navbar = () => {
 
         <div
           className={`
-          md:hidden bg-zinc-900 overflow-hidden z-90 transition-all duration-300
+          md:hidden overflow-hidden z-90 transition-all duration-300
           ${isCollapsed ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}
         `}
         >
